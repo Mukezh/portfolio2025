@@ -8,7 +8,7 @@ export const Home: React.FC = () => {
                 <p>An Engineer who like to build and understand stuffs in depth</p> 
                 <br />
                 <p>
-                    I either read or code or just suffer in silence.
+                    I either read or code or suffer in silence.
                 </p>
                 <br />
                 I live by the motto: 

@@ -1,28 +1,14 @@
-import { Home } from "./components/Home"
-import { Header } from "./components/Header"
-import { Navbar } from "./components/Navbar"
-import { Footer } from "./components/Footer"
+import MainHomePage from "./components/MainHomepage"
+import { Project } from "./components/Projects/Projects"
+
 
 
 function App() {
-
-
+  
   return (
-    <div className="h-screen bg-[#EFDFD8]">
-    <div className="px-8 flex flex-col justify-center items-center font-mono  ">
-      <div className="w-full p-4" >
-        <Header />
-      </div>
-      <div className="w-full px-4">
-        <Navbar />
-      </div>
-      <div className="w-full px-4">
-        <Home />
-      </div>
-      <div className="w-full px-4 mt-128">
-        <Footer />
-      </div>
-    </div>
+    <div className="">
+    <MainHomePage />
+    {/* <Project /> */}
     </div>
   )
 }

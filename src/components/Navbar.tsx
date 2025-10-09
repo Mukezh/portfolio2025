@@ -4,7 +4,7 @@ import { NavbarButton } from "./NavbarButton";
 export const Navbar: React.FC = () => {
     return (
         <>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 ">
             <NavbarButton value= "Home"/>
             <NavbarButton value= "Projects" />
             <NavbarButton value= "Javascript" />
