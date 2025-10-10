@@ -2,11 +2,14 @@ import { Home } from "./Home"
 import { Header } from "./Header"
 import { Navbar } from "./Navbar"
 import { Footer } from "./Footer"
+import { useState } from "react";
+import { Project } from "./Projects/Projects";
 
 
 
 function MainHomePage() {
-  
+    const [selection, setSelection] = useState('home');
+
   return (
     <div className="min-h-screen bg-[#EFDFD8] ">
     <div className="px-8 flex flex-col justify-center items-center font-mono">
@@ -14,10 +17,13 @@ function MainHomePage() {
         <Header />
       </div>
       <div className="w-full px-2 lg:px-4 ">
-        <Navbar />
+        <Navbar onSelect={setSelection} />
       </div>
       <div className="w-full px-2 lg:px-4">
-        <Home />
+        {selection === 'home' && <Home />}
+      </div>
+      <div className="w-full px-2 lg:px-4">
+        {selection === 'project' && <Project />}
       </div>
       <div className="w-full px-2 lg:px-4 ">
         <Footer />

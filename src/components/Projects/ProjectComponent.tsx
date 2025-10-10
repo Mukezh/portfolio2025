@@ -12,12 +12,11 @@ export const ProjectComponent:React.FC<ProjectComponentprops> = ({   ProjectName
         <>
             <div className=" flex flex-col gap-4 p-4">
                 <h3 className="">
-                    {ProjectName }- <NavbarButton url={RepoURL} value="Repo" />
+                    {ProjectName } - <NavbarButton  url={RepoURL} value="Repo" />
                 </h3>
                 <div className="flex-wrap max-w-2/3 max-h-1/3">
                     {ProjectDesc}
                 </div>
-                
             </div>
         </>
     )
