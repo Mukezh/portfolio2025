@@ -4,6 +4,7 @@ import { Navbar } from "./Navbar"
 import { Footer } from "./Footer"
 import { useState } from "react";
 import { Project } from "./Projects/Projects";
+import { Writeup } from "./Writeup/Writeup";
 
 
 
@@ -24,6 +25,9 @@ function MainHomePage() {
       </div>
       <div className="w-full px-2 lg:px-4">
         {selection === 'project' && <Project />}
+      </div>
+      <div className="w-full px-2 lg:px-4">
+        {selection === 'Writeups' && <Writeup />}
       </div>
       <div className="w-full px-2 lg:px-4 ">
         <Footer />
