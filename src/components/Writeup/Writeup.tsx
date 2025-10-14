@@ -1,36 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { WriteupComponent } from "./WriteupComponent";
-
+import { DetailedWriteup } from "./DetailedWriteup";
 
 export const Writeup:React.FC = () => {
+    const [selectedWriteup, setSelectedWriteup] = useState<string | null>(null);
+
+    const writeup = [
+        {slug: 'Javascript', date:'14-10-2025', head: 'Javascript behind the scenes'},
+        {slug: 'Typescript', date:'14-10-2025', head: 'TS behind the scenes'},
+
+    ]
+
+    if(selectedWriteup){
+        return (
+            <DetailedWriteup 
+                slug={selectedWriteup}
+                onBack={() => setSelectedWriteup(null)} />
+        )
+    }
     
     return (
         <div >
-            <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
-                        <WriteupComponent date={'13-10-2025'} head={'This is the head and i am increasing the size'} />
-            <WriteupComponent date={'13-10-2025'} head={'This is the head '} />
+            {
+                writeup.map((w) => (
+                    <WriteupComponent
+                    key={w.slug}
+                    date={w.date}
+                    head={w.head}
+                    onClick= {() => setSelectedWriteup(w.slug)} />
+                ))
+            }
         </div>
     )
 }

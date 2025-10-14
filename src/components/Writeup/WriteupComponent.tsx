@@ -2,13 +2,14 @@ import React from "react";
 
 interface writeupInterface {
     date: string,
-    head: string
+    head: string,
+    onClick? : () => void
 }
 
 
-export const WriteupComponent:React.FC<writeupInterface> = ({date,head}) => {
+export const WriteupComponent:React.FC<writeupInterface> = ({date,head, onClick}) => {
     return (
-        <div className="font-mono  max-w-screen  bg-[#EFDFD8] hover:underline hover:cursor-pointer">
+        <div onClick={onClick} className="font-mono  max-w-screen  bg-[#EFDFD8] hover:underline hover:cursor-pointer">
             <div className="flex">
                 <div className="pl-64 pr-64">
                     {date}

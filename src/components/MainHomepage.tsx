@@ -30,7 +30,7 @@ function MainHomePage() {
         {selection === 'Writeups' && <Writeup />}
       </div>
       <div className="w-full px-2 lg:px-4 ">
-        <Footer />
+        {selection === 'home'&&<Footer />}
       </div>
     </div>
           
