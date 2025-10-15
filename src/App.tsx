@@ -1,11 +1,11 @@
-import MainHomePage from "./components/MainHomepage"
+// import MainHomePage from "./components/MainHomepage"
 
-function App() {
-  return (
-    <>
-    <MainHomePage />
-    </>
-  )
-}
+// function App() {
+//   return (
+//     <>
+//     <MainHomePage />
+//     </>
+//   )
+// }
 
-export default App
+// export default App

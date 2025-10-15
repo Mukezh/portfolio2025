@@ -15,10 +15,10 @@ export const ProjectComponent:React.FC<ProjectComponentprops> = ({   ProjectName
             .then(res => res.text())
             .then(res => setDesc(res))
     },[])
-        
+
     return (
         <>
-            <div className=" flex flex-col gap-4 p-4">
+            <div className=" flex flex-col gap-4 p-4 ">
                 <h3 className="">
                     {ProjectName } - <NavbarButton  url={RepoURL} value="Repo" />
                 </h3>
