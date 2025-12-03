@@ -1,18 +1,34 @@
 import React from "react";
 import { NavbarButton } from "./NavbarButton";
+import { Tooltip } from "./ui/tooltip-card";
 
 export const Footer: React.FC = () => {
-    const xUrl:string = "https://x.com/tattakkaaee"
-    const githubUrl:string = "https://github.com/Mukezh"
-    const linkedInUrl:string = "https://linkedin.com/in/mukeshbabu"
-    return (
-        <div className=" flex flex-col gap-2">
-            <hr className="w-full m-4 border-gray-300" />
-           <div className="flex gap-4 ">
-            <NavbarButton value="X" url={xUrl} />
-            <NavbarButton value="Github" url={githubUrl}  />
-            <NavbarButton value="LinkedIn" url={linkedInUrl} />
-           </div>
-        </div>
-    )
-}
+  const xUrl: string = "https://x.com/tattakkaaee";
+  const githubUrl: string = "https://github.com/Mukezh";
+  const linkedInUrl: string = "https://linkedin.com/in/mukeshbabu";
+  return (
+    <div className=" flex flex-col gap-2">
+      <hr className="w-full m-4 border-gray-300" />
+      <div className="flex gap-4 ">
+        <Tooltip
+          content={<img src="../../public/Xsnip.jpg" />}
+          containerClassName="X-container"
+        >
+          <NavbarButton value="X" url={xUrl} />
+        </Tooltip>
+        <Tooltip
+          content={<img src="../../public/LinkedInSnip.jpg" />}
+          containerClassName="LinkedIn-container"
+        >
+          <NavbarButton value="LinkedIn" url={linkedInUrl} />
+        </Tooltip>
+        <Tooltip
+          content={<img src="../../public/GithubSnip.jpg" />}
+          containerClassName="Github-container"
+        >
+          <NavbarButton value="Github" url={githubUrl} />
+        </Tooltip>
+      </div>
+    </div>
+  );
+};
