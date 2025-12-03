@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 /**
@@ -106,22 +106,22 @@ export default function Gear5LuffyWalker({
   }, [enabled, reducedMotion, controls, maxSpeed, minSpeed, margin]);
 
   // Limb animation variants (subtle waving)
-  const limbVariants = {
-    idle: {
-      rotate: [0, -12, 0, 10, 0],
-      transition: { duration: 2.6, repeat: Infinity, ease: "easeInOut" },
-    },
-    reduced: { rotate: 0 },
-  } as const;
+  // const limbVariants = {
+  //   idle: {
+  //     rotate: [0, -12, 0, 10, 0],
+  //     transition: { duration: 2.6, repeat: Infinity, ease: "easeInOut" },
+  //   },
+  //   reduced: { rotate: 0 },
+  // } as const;
 
-  const floatBob = {
-    animate: reducedMotion
-      ? { y: 0 }
-      : {
-          y: [0, -8, 0, -6, 0],
-          transition: { duration: 3.6, repeat: Infinity, ease: "easeInOut" },
-        },
-  };
+  // const floatBob = {
+  //   animate: reducedMotion
+  //     ? { y: 0 }
+  //     : {
+  //         y: [0, -8, 0, -6, 0],
+  //         transition: { duration: 3.6, repeat: Infinity, ease: "easeInOut" },
+  //       },
+  // };
 
   return (
     <div
@@ -139,7 +139,7 @@ export default function Gear5LuffyWalker({
         {/* The mascot container: scales down on small screens */}
         <motion.div
           className="select-none pointer-events-none"
-          variants={floatBob}
+          // variants={floatBob}
           animate={"animate"}
         >
           {/* Inline SVG: a stylized Gear 5 Luffy - inspired mascot. Swap this for your own art if you like. */}

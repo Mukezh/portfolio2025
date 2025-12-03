@@ -31,8 +31,8 @@ function MainHomePage() {
         <div className="w-full px-2 lg:px-4 ">
           {selection === "home" && <Footer />}
         </div>
+        <Gear5LuffyWalker />
       </div>
-      <Gear5LuffyWalker />
     </div>
   );
 }
