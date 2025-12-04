@@ -11,19 +11,19 @@ export const Footer: React.FC = () => {
       <hr className="w-full m-4 border-gray-300" />
       <div className="flex gap-4 ">
         <Tooltip
-          content={<img src="../../public/Xsnip.jpg" />}
+          content={<img src="/Xsnip.jpg" />}
           containerClassName="X-container"
         >
           <NavbarButton value="X" url={xUrl} />
         </Tooltip>
         <Tooltip
-          content={<img src="../../public/LinkedInSnip.jpg" />}
+          content={<img src="/LinkedInSnip.jpg" />}
           containerClassName="LinkedIn-container"
         >
           <NavbarButton value="LinkedIn" url={linkedInUrl} />
         </Tooltip>
         <Tooltip
-          content={<img src="../../public/GithubSnip.jpg" />}
+          content={<img src="/GithubSnip.jpg" />}
           containerClassName="Github-container"
         >
           <NavbarButton value="Github" url={githubUrl} />

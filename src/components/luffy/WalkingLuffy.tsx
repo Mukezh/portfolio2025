@@ -144,7 +144,7 @@ export default function Gear5LuffyWalker({
         >
           {/* Inline SVG: a stylized Gear 5 Luffy - inspired mascot. Swap this for your own art if you like. */}
           <img
-            src="../../public/cute_luffy3.png" // replace with your actual public path or import
+            src="/cute_luffy3.png" // replace with your actual public path or import
             alt="Luffy silhouette"
             className="w-40 h-40 object-contain drop-shadow-xl"
           />
