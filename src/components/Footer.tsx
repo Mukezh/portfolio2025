@@ -6,6 +6,7 @@ export const Footer: React.FC = () => {
   const xUrl: string = "https://x.com/tattakkaaee";
   const githubUrl: string = "https://github.com/Mukezh";
   const linkedInUrl: string = "https://linkedin.com/in/mukeshbabu";
+  const resumeUrl: string = "./resume_updated.pdf";
   return (
     <div className=" flex flex-col gap-2">
       <hr className="w-full m-4 border-gray-300" />
@@ -27,6 +28,12 @@ export const Footer: React.FC = () => {
           containerClassName="Github-container"
         >
           <NavbarButton value="Github" url={githubUrl} />
+        </Tooltip>
+        <Tooltip
+          content={<img src="/ResumeSnip.jpg" />}
+          containerClassName="Resume-container"
+        >
+          <NavbarButton value="Resume" url={resumeUrl} />
         </Tooltip>
       </div>
     </div>
