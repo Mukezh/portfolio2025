@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Project } from "./Projects/Projects";
 import { Writeup } from "./Writeup/Writeup";
 import Gear5LuffyWalker from "./luffy/WalkingLuffy";
+import HeroSection from "./HeroSection";
 
 function MainHomePage() {
   const [selection, setSelection] = useState("home");
@@ -27,6 +28,10 @@ function MainHomePage() {
         </div>
         <div className="w-full px-2 lg:px-4">
           {selection === "Writeups" && <Writeup />}
+        </div>
+        <br />
+        <div className="mx-4">
+          <HeroSection />
         </div>
         <div className="w-full px-2 lg:px-4 ">
           {selection === "home" && <Footer />}
