@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css';
-import MainHomePage from './components/MainHomepage.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import MainHomePage from "./components/MainHomepage.tsx";
+import { PostHogProvider } from "@posthog/react";
 
-createRoot(document.getElementById('root')!).render(
+const options = {
+  api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+  defaults: "2025-11-30",
+} as const;
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MainHomePage />
+    <PostHogProvider
+      apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY}
+      options={options}
+    >
+      <MainHomePage />
+    </PostHogProvider>
   </StrictMode>,
-)
+);
